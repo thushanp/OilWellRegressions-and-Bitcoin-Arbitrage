@@ -12,3 +12,18 @@ xyplot(lnWeight ~ lnLength, data = alligator,
 )
 alli.mod1 = lm(lnWeight ~ lnLength, data = alligator)
 summary(alli.mod1)
+xyplot(resid(alli.mod1) ~ fitted(alli.mod1),
+       xlab = "Fitted Values",
+       ylab = "Residuals",
+       main = "Residual Diagnostic Plot",
+       panel = function(x, y, ...)
+       {
+         panel.grid(h = -1, v = -1)
+         panel.abline(h = 0)
+         panel.xyplot(x, y, ...)
+       }
+)
+qqmath( ~ resid(alli.mod1),
+        xlab = "Theoretical Quantiles",
+        ylab = "Residuals"
+)
