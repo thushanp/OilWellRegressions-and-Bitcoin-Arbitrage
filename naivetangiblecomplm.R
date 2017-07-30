@@ -8,8 +8,8 @@ xyplot(TangibleCompletion ~ ProductDates, data = Data[order(Data$ProductDates),]
        ylab = "Costs ($)",
        main = "Intangible Dry Well Costs Over Time (2012-2017)",
        grid = TRUE,
-       col = c('gold'),
+       col = c('magenta'),
        type = c("p", "smooth"), 
-       col.line = "brown", 
+       col.line = "purple", 
        lwd = 3
 )
