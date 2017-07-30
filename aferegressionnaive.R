@@ -6,5 +6,5 @@ xyplot(TangibleDryWell ~ ProductDates, data = Data,
        ylab = "Costs ($)",
        main = "Oil Well Cost Data",
        grid = TRUE,
-       type = c("p", "r")
+       type = c("p", "smooth"), col.line = "darkorange", lwd = 3
 )
