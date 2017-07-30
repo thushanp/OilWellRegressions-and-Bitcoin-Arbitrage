@@ -4,5 +4,7 @@ regmodel <- lm(TangibleDryWell ~ ProductDates, data = Data)
 xyplot(TangibleDryWell ~ ProductDates, data = Data,
        xlab = "Oil Well Production Dates",
        ylab = "Costs ($)",
-       main = "Oil Well Cost Data"
+       main = "Oil Well Cost Data",
+       grid = TRUE,
+       type = c("p", "r")
 )
