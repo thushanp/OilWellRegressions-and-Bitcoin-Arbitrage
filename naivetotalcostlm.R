@@ -8,8 +8,8 @@ xyplot(TotalCost ~ ProductDates, data = Data[order(Data$ProductDates),],
        ylab = "Costs ($)",
        main = "Naive Total Well Costs (2012-2017)",
        grid = TRUE,
-       col = c('green'),
+       col = c('orange'),
        type = c("p", "smooth"), 
-       col.line = "darkgreen", 
+       col.line = "gold", 
        lwd = 3
 )
