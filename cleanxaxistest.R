@@ -1,9 +1,16 @@
 library(lattice)
 Data <- read.csv("afes.csv")
 regmodel <- lm(TangibleDryWell ~ ProductDates, data = Data)
-Data$ProductDates <- as.POSIXct(strptime(Data$ProductDates,"%Y-%m-%d"))
+print (Data$ProductDates)
 xyplot(TangibleDryWell ~ ProductDates, data = Data,
+       scales = list(
+         x = list(
+           format = "%d-%b" # Here's where you choose the format
+         )
+       ),
        xlab = "Oil Well Production Dates",
        ylab = "Costs ($)",
-       main = "Oil Well Cost Data"
+       main = "Oil Well Cost Data",
+       grid = TRUE,
+       type = c("p", "smooth"), col.line = "darkorange", lwd = 3
 )
