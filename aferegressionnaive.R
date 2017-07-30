@@ -1,8 +1,8 @@
 library(lattice)
 Data <- read.csv("afes.csv", header=TRUE)
 str(Data)
-regmodel <- lm(TangibleDryWell ~ ï..ProductDates, data=Data)
-xyplot(TangibleDryWell ~ ï..ProductDates, data = Data,
+regmodel <- lm(TangibleDryWell ~ ProductDates, data=Data)
+xyplot(TangibleDryWell ~ ProductDates, data = Data,
        xlab = "Oil Well Production Dates",
        ylab = "Costs ($)",
        main = "Oil Well Cost Data",
